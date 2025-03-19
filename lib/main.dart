@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food/auth/login_or_register.dart';
 import 'package:food/theme/theme_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: Provider.of<ThemeProvider>(context, listen: false).themeData,
+      home: LoginOrRegister(),
     );
   }
 }
