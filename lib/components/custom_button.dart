@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   // Member Variable
-  String text;
-  void Function()? onPresse;
+  final String text;
+  final void Function()? onPresse;
   // Constructor
-  CustomButton({super.key, required this.text, required this.onPresse});
+  const CustomButton({super.key, required this.text, required this.onPresse});
 
   @override
   Widget build(BuildContext context) {

@@ -5,6 +5,7 @@ import 'package:food/theme/light_theme.dart';
 
 class ThemeProvider with ChangeNotifier {
   // 현재 Theme private하게만들어서 외부에서 접근못하게만듬
+  // ignore: prefer_final_fields
   ThemeData _theme = lightTheme;
   // 현재 Darkmode 인지 확인하기
   bool get isDarkMode => _theme == darkTheme;
@@ -17,7 +18,7 @@ class ThemeProvider with ChangeNotifier {
   }
 
   void toggleTheme() {
-    if (isDarkMode) {
+    if (_theme == darkTheme) {
       themeData = lightTheme;
     } else {
       themeData = darkTheme;
