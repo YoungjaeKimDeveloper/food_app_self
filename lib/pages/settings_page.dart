@@ -19,6 +19,7 @@ class SettingsPage extends StatelessWidget {
       ),
       body: Column(
         children: [
+          SizedBox(height: 20),
           // Container
           Padding(
             padding: const EdgeInsets.all(10.0),

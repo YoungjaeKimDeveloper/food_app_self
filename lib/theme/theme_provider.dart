@@ -9,11 +9,12 @@ class ThemeProvider with ChangeNotifier {
   ThemeData _theme = lightTheme;
   // 현재 Darkmode 인지 확인하기
   bool get isDarkMode => _theme == darkTheme;
-  // ThemeData
+  // ThemeData // get 으로 가져오기 항상 get set뭐 이런건 데이터 타입만들고나서
   ThemeData get themeData => _theme;
   // Set the ThemeData
   set themeData(ThemeData themeData) {
     _theme = themeData;
+    // 변경될때마다 provider에 항상 알려주기
     notifyListeners();
   }
 
