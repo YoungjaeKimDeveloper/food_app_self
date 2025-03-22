@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food/components/custom_current_location.dart';
+import 'package:food/components/custom_description.dart';
 import 'package:food/components/custom_drawer.dart';
 import 'package:food/components/custom_sliverappbar.dart';
 
@@ -16,9 +18,18 @@ class HomePage extends StatelessWidget {
             // 유동적인 Appbar를 만들어줌
             CustomSliverappbar(
               title: Text("Title"),
-              child: Text(
-                "This is the child widget",
-                style: TextStyle(color: Colors.red),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 20),
+                  Divider(
+                    color: Theme.of(context).colorScheme.secondary,
+                    indent: 20,
+                    endIndent: 20,
+                  ),
+                  CustomCurrentLocation(),
+                  CustomDescription(),
+                ],
               ),
             ),
           ];
