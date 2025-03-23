@@ -8,7 +8,7 @@ class Food {
   final String description; // a burger full of cheese
   final String imagePath; // lib/images/cheese_burger.jpg
   final double price; // 4.99
-  final FoodCategory category; //burger
+  final FoodCategory foodCategory; //burger
   List<Addon> availableAddons; // [extra cheese, patty]
 
   // Constructor
@@ -17,7 +17,7 @@ class Food {
     required this.description,
     required this.imagePath,
     required this.price,
-    required this.category,
+    required this.foodCategory,
     required this.availableAddons,
   });
 }
