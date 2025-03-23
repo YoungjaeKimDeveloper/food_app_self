@@ -15,13 +15,13 @@ class CustomSliverappbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverAppBar(
       collapsedHeight: 120, // 최소높이
-      expandedHeight: 300, //최대높이
+      expandedHeight: 350, //최대높이
       pinned: true,
       backgroundColor: Theme.of(context).colorScheme.surface,
       elevation: 0,
       centerTitle: true,
       floating: true, //끝까지 밀어야 지워짐
-      title: title,
+      title: Text("SunDinner"),
       actions: [
         Padding(
           padding: const EdgeInsets.all(8.0),
