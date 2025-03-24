@@ -20,7 +20,6 @@ class CustomSliverappbar extends StatelessWidget {
       backgroundColor: Theme.of(context).colorScheme.surface,
       elevation: 0,
       centerTitle: true,
-      floating: true, //끝까지 밀어야 지워짐
       title: Text("SunDinner"),
       actions: [
         Padding(
