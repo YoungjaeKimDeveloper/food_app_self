@@ -23,6 +23,7 @@ class Food {
 }
 
 // food addons
+// Name + Price 만을 이야기하는거임
 class Addon {
   String name;
   double price;
