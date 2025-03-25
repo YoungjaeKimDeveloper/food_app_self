@@ -7,6 +7,7 @@ import 'package:food/components/custom_sliverappbar.dart';
 import 'package:food/components/custom_tab_bar.dart';
 import 'package:food/models/food.dart';
 import 'package:food/models/restaurant.dart';
+import 'package:food/pages/food_page.dart';
 import 'package:provider/provider.dart';
 
 // 애니메시연 사용을 위해 StatefulWidget으로 바꿔주어야함
@@ -49,7 +50,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     return FoodCategory.values.map((category) {
       // get category menu
       List<Food> categoryMenu = _filtermenuByCategory(fullMenu, category);
-
+      // ListView
       return ListView.builder(
         physics: NeverScrollableScrollPhysics(),
         itemCount: categoryMenu.length,
@@ -58,7 +59,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           // get individual food
           final food = categoryMenu[index];
           // return food tile UI
-          return CustomFoodTile(food: food, onTap: onTap);
+          return CustomFoodTile(
+            food: food,
+            onTap:
+                () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FoodPage(food: food)),
+                ),
+          );
         },
       );
     }).toList();

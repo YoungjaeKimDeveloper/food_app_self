@@ -4,6 +4,7 @@ import 'package:food/models/food.dart';
 class CustomFoodTile extends StatelessWidget {
   final Food food;
   final void Function()? onTap;
+
   const CustomFoodTile({super.key, required this.food, required this.onTap});
 
   @override
@@ -13,7 +14,7 @@ class CustomFoodTile extends StatelessWidget {
       child: Column(
         children: [
           GestureDetector(
-            onTap: null,
+            onTap: onTap,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
